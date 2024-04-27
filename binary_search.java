@@ -11,8 +11,6 @@ public class binary_search {
                 i =mid+1;
             else if(num[mid] > target)
                 j=mid-1;
-            else
-                return -1;
         }
         return -1;
     }
