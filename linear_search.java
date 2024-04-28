@@ -1,3 +1,4 @@
+// linear search
 public class linear_search {
     public static int linearSearch(int[] num,int target){
             for(int i=0;i<num.length;i++){
