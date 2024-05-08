@@ -5,8 +5,10 @@ public class selection_sort {
         int i = array.length-1;
         while(i > 0){
             int max = i;
-            for(int j=i; j > 0 ;j--){
-                if(array[max] < array[j-1]){
+            for(int j=i-1; j >= 0 ;j--){
+                if(array[max] < array[j]){
+//                    System.out.println();
+//                    System.out.println(array[max]+" "+array[j]);
                     max = j;
                 }
             }
