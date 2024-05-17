@@ -1,13 +1,16 @@
 public class quick_sort {
     public static void QuickSort(int[] arr ,int low ,int high){
-        System.out.println(low+ " "+ high);
+        if(low<high){
+//        System.out.println("");
+//        System.out.println(low+ " "+ high);
         int pi = partition(arr,low,high);
 //        System.out.println(pi);
         QuickSort(arr ,low ,pi-1);
         QuickSort(arr,pi+1,high);
+        }
     }
     public static int partition(int[] arr ,int low ,int high){
-        System.out.println(low+ " "+ high);
+//        System.out.println("inside partition "+low+ " "+ high);
         int pivot = arr[high];
         int i=low-1;
         for (int j =low;j< high;j++){
@@ -16,12 +19,19 @@ public class quick_sort {
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
+//                for (int h: arr) {
+//                    System.out.print(h + " ");
+//                }
+//                System.out.println("");
             }
         }
         int temp =arr[i+1];
         arr[i+1]=arr[high];
         arr[high] =temp;
-
+//        for (int h: arr) {
+//            System.out.print(h + " ");
+//        }
+//            System.out.println("");
         return i+1;
     }
     public static void main(String[] args) {
