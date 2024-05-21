@@ -5,7 +5,7 @@ public class merge_sort {
         if (left < right) {
             int mid = (left + right) / 2;
             mergeSort(arr, left, mid);
-            mergeSort(arr, left, mid + 1);
+            mergeSort(arr, mid+1,right);
             merge(arr, left, mid, right);
         }
     }
@@ -51,7 +51,6 @@ public class merge_sort {
         System.out.print("after sorting array - ");
         for (int i : array) {
             System.out.print(i + " ");
-
         }
     }
 }
