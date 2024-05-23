@@ -11,15 +11,28 @@ public class merge_sort {
     }
 
     public static void merge(int[] arr, int left, int mid, int right) {
-        int[] newArr = new int[arr.length];
-        int i = left, j = mid + 1, k = 0;
-        while (i <= mid && j <= right) {
-            if (arr[i] <= arr[j]) {
-                newArr[k] = arr[i];
+        int n1 = mid -left + 1;
+        int n2 = right - mid;
+
+        int[] lArr = new int[n1];
+        int[] rArr = new int[n2];
+
+
+       for(int x =0 ; x <= n1 ;x++){
+           lArr[x] = arr[left + x]
+       }
+
+        for(int x =0 ; x <= n2 ;x++){
+            lArr[x] = arr[ mid + 1 + x];
+        }
+        int i =0,j=0,k =0;
+        while (i <=  n1 && j <= n2) {
+            if (lArr[i] <= rArr[j]) {
+                arr[k] = lArr[i];
                 k++;
                 i++;
             } else {
-                newArr[k] = arr[j];
+                arr[k] = lArr[j];
                 k++;
                 j++;
             }
@@ -35,8 +48,10 @@ public class merge_sort {
         k++;
         j++;
     }
-        for(int l = 0; l < arr.length; l++) {
-            arr[l] = newArr[l];
+        System.out.print(" ");
+        for(int l = 0; l < newArr.length; l++) {
+
+            System.out.print(newArr[l] + " ");
         }
 
 }
