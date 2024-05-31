@@ -63,10 +63,10 @@ public class MergeSort {
         }
         mergeSort(array,0,array.length-1);
         System.out.println(" ");
+        
         System.out.print("after sorting array - ");
         for (int i : array) {
             System.out.print(i + " ");
-
         }
     }
 }
